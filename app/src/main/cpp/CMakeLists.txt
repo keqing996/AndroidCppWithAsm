@@ -4,6 +4,9 @@
 
 # Sets the minimum CMake version required for this project.
 cmake_minimum_required(VERSION 3.22.1)
+enable_language(ASM)
+set(can_use_assembler TRUE)
+set(CMAKE_VERBOSE_MAKEFILE on)
 
 # Declares the project name. The project name can be accessed via ${ PROJECT_NAME},
 # Since this is the top level CMakeLists.txt, the project name is also accessible
@@ -26,7 +29,8 @@ project("androidasm")
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        native-lib.cpp)
+        factorial.s
+        native_lib.cpp)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
