@@ -9,7 +9,6 @@ import com.noemie.androidasm.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Used to load the 'androidasm' library on application startup.
     static {
         System.loadLibrary("androidasm");
     }
@@ -23,14 +22,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Example of a call to a native method
         TextView tv = binding.sampleText;
-        tv.setText(stringFromJNI());
+        tv.setText(StringFromJNI());
     }
 
-    /**
-     * A native method that is implemented by the 'androidasm' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+    public static native String StringFromJNI();
 }
