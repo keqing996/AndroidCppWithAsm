@@ -1,11 +1,11 @@
-package com.grf.androidasm;
+package com.noemie.androidasm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.grf.androidasm.databinding.ActivityMainBinding;
+import com.noemie.androidasm.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

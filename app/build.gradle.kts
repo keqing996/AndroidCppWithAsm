@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.grf.androidasm"
-    compileSdk = 33
+    namespace = "com.noemie.androidasm"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.grf.androidasm"
+        applicationId = "com.noemie.androidasm"
         minSdk = 28
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
