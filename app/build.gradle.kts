@@ -26,6 +26,9 @@ android {
                 abiFilters += "arm64-v8a"
             }
         }
+        debug{
+            isJniDebuggable = true
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

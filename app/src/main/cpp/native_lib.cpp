@@ -1,11 +1,11 @@
 #include <jni.h>
 #include <string>
 
-extern "C" int Factorial(int num);
+extern "C" int GetNumber(void);
 
 JNIEXPORT jstring JNICALL StringFromJNI(JNIEnv *env, jclass clazz)
 {
-    std::string hello = "Hello from C++ " + std::to_string(Factorial(6));
+    std::string hello = "Hello from C++ " + std::to_string(GetNumber());
     return env->NewStringUTF(hello.c_str());
 }
 
