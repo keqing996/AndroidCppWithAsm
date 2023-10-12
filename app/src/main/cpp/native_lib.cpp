@@ -2,10 +2,11 @@
 #include <string>
 
 extern "C" int GetNumber(void);
+extern "C" char* GetHelloStr(void);
 
 JNIEXPORT jstring JNICALL StringFromJNI(JNIEnv *env, jclass clazz)
 {
-    std::string hello = "Hello from C++ " + std::to_string(GetNumber());
+    std::string hello = std::string {GetHelloStr()} + std::to_string(GetNumber());
     return env->NewStringUTF(hello.c_str());
 }
 

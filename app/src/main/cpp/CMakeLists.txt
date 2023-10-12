@@ -29,7 +29,8 @@ project("androidasm")
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        factorial.s
+        get_number.s
+        get_hello_str.s
         native_lib.cpp)
 
 # Specifies libraries CMake should link to your target library. You
